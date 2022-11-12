@@ -1,0 +1,19 @@
+<div class="mb-3">
+  <form (ngSubmit)="onSubmitFormEmit.emit(productForm)" #productForm="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" name="name" id="name" class="form-control" placeholder="" [(ngModel)]="product!.name">
+      <small class="text-muted">Name is required</small>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label"></label>
+      <textarea class="form-control" name="description" rows="3"  [(ngModel)]="product!.description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="text" name="price" id="price" class="form-control" placeholder="" aria-describedby="helpId"  [(ngModel)]="product!.price">
+      <small id="helpId" class="text-muted">Price is required</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

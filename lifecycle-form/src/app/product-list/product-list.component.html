@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row align-items-center g-2">
+    <div class="col-4" *ngFor="let item of products">
+      <app-product-item 
+        [product]="item"
+        (deleteProductEmit)="onDeleteById($event)"
+        (onUpdateEmit)="onUpdate($event)"
+        ></app-product-item>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center g-2">
+    <app-form
+      [product]="product"
+      (onSubmitFormEmit)="onSubmitForm($event)"
+    ></app-form>
+  </div>
+</div>

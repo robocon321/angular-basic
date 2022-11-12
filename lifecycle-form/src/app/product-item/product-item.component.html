@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-img-top" src="https://dummyimage.com/600x400/000/fff" alt="Title">
+  <div class="card-body">
+    <h4 class="card-title">{{product.name}}</h4>
+    <p class="card-text">{{product.description}}</p>
+    <p class="card-text">{{product.price}}</p>
+    <button class="btn btn-danger me-3" (click)="deleteProductEmit.emit(product.id)">Delete</button>
+    <button class="btn btn-success me-3" (click)="onUpdateEmit.emit(product.id)">Update</button>
+  </div>
+</div>
