@@ -1,0 +1,33 @@
+<div class="container">
+  <header class="card-header p-5">Header</header>
+  <main>
+    <ul class="nav justify-content-left my-5">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+          aria-current="page"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-primary" (click)="login()">Login</button>
+      </li>
+      <li class="nav-item mx-2">
+        <button class="btn btn-warning" (click)="logout()">Logout</button>
+      </li>
+      <li class="nav-item mx-2" *ngIf="isLogin; else elseBlock">
+        <button class="btn btn-info">Logged in</button>
+      </li>
+      <ng-template #elseBlock>
+        <button class="btn btn-info">Not logged in</button>
+      </ng-template>
+    </ul>
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="card-footer text-muted p-5">Footer</footer>
+</div>
